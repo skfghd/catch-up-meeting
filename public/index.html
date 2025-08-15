@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>KindTool AI - 팀 커뮤니케이션 MBTI 분석 플랫폼</title>
+    <meta name="description" content="AI 기반 팀 커뮤니케이션 분석으로 효과적인 회의와 협업을 만들어보세요. MBTI 기반 개인별 소통 스타일 분석과 아이스브레이킹 세션을 제공합니다.">
+    <meta name="keywords" content="MBTI, 팀 커뮤니케이션, 회의 효율성, 아이스브레이킹, 조직 분석, AI 분석">
+    <meta name="author" content="KindTool AI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kindtool-ai.web.app/">
+    <meta property="og:title" content="KindTool AI - 팀 커뮤니케이션 MBTI 분석 플랫폼">
+    <meta property="og:description" content="AI 기반 팀 커뮤니케이션 분석으로 효과적인 회의와 협업을 만들어보세요.">
+    <meta property="og:image" content="https://kindtool-ai.web.app/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kindtool-ai.web.app/">
+    <meta property="twitter:title" content="KindTool AI - 팀 커뮤니케이션 MBTI 분석 플랫폼">
+    <meta property="twitter:description" content="AI 기반 팀 커뮤니케이션 분석으로 효과적인 회의와 협업을 만들어보세요.">
+    <meta property="twitter:image" content="https://kindtool-ai.web.app/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kindtool-ai.web.app/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "KindTool AI",
+      "description": "AI 기반 팀 커뮤니케이션 MBTI 분석 플랫폼",
+      "url": "https://kindtool-ai.web.app",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "KindTool AI"
+      }
+    }
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-ADSENSE-ID"
+         crossorigin="anonymous"></script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+      // Basic performance monitoring
+      window.addEventListener('load', function() {
+        if ('performance' in window && 'timing' in window.performance) {
+          const timing = window.performance.timing;
+          const loadTime = timing.loadEventEnd - timing.navigationStart;
+          console.log('Page load time:', loadTime + 'ms');
+        }
+      });
+    </script>
+    
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://asia-northeast3-kindtool-ai.cloudfunctions.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Loading Fallback -->
+    <noscript>
+        <div style="text-align: center; padding: 50px; font-family: sans-serif;">
+            <h1>KindTool AI</h1>
+            <p>JavaScript가 필요합니다. 브라우저에서 JavaScript를 활성화해주세요.</p>
+            <p>This application requires JavaScript. Please enable JavaScript in your browser.</p>
+        </div>
+    </noscript>
+    
+    <!-- Error Boundary Fallback -->
+    <script>
+      window.addEventListener('error', function(e) {
+        console.error('Application error:', e.error);
+        // You can add error reporting here
+      });
+      
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+        // You can add error reporting here
+      });
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+// Backup of original rooms.tsx - moved to prevent import issues

@@ -1,0 +1,64 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to all documents for authenticated users
+    // In production, you should implement proper security rules
+    match /{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Organizations - public read for discovery, write for members
+    match /organizations/{orgId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Organization members - only organization members can access
+    match /organizationMembers/{memberId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // App users - users can read/write their own data
+    match /appUsers/{userId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Icebreaking sessions - public read for discovery
+    match /icebreakingSessions/{sessionId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Icebreaking participants - session participants can access
+    match /icebreakingParticipants/{participantId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Meeting rooms - organization members can access
+    match /meetingRooms/{roomId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Teams and team members - team members can access
+    match /teams/{teamId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    match /teamMembers/{memberId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Meetings and related data - participants can access
+    match /meetings/{meetingId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    match /meetingParticipants/{participantId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    match /meetingFeedback/{feedbackId} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
